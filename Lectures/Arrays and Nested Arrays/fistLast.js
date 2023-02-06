@@ -1,7 +1,7 @@
 function solve(startArr){
     let sum = Number(startArr.pop()) + Number(startArr.shift());
 
-    console.log(sum);
+    return sum;
 }
 
 
