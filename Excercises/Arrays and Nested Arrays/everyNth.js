@@ -5,7 +5,7 @@ function solve(strArr, num){
             resultArrr.push(strArr[i]);
         }
     }
-    console.log(resultArrr);
+    return resultArrr;
 }
 
 
