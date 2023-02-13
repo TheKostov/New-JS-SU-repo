@@ -2,7 +2,7 @@ function townPopulationAltSyntax(inputArr){
     const result = {};
 
     for (let line of inputArr){
-        const [townName, townPopulation] = line.split(' <->');
+        const [townName, townPopulation] = line.split(' <-> ');
 
        if (townName in result == false){
             result[townName] = 0;
