@@ -4,7 +4,7 @@ function cityRecord (name, population, treasury){
         population,
         treasury
     }
-    console.log(city);
+    return city;
 }
 
 
