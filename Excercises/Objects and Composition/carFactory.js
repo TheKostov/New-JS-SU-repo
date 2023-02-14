@@ -16,8 +16,8 @@ function solve({ model, power, color, carriage, wheelsize }){
     
     const newWheelSize = wheelsize % 2 === 0 ? --wheelsize : wheelsize;
 
-    console.table(result);
-    return result = {
+    
+    return car = {
         model,
         engine,
         color,
