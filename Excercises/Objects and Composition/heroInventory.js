@@ -4,11 +4,10 @@ function solve(stringArr){
         const hero = {
             name,
             level: Number(level),
-            item: item ? item.split(', ') : [],
+            items: item ? item.split(', ') : [],
         };
         acc.push(hero);
         return acc;
     }, []);
-    console.log(JSON.stringify(result));
-    // return JSON.stringify(result);
+    return JSON.stringify(result);
 }
