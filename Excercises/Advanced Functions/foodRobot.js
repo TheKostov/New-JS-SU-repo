@@ -33,7 +33,7 @@ function solution() {
                     return `Error not enough ${el} in stock`;
                 }
             }
-            for (const el of recipe) {
+            for (const el in recipe) {
                 storedElements[el] -= recipe[el] * quantity;
             }
             return `Success`
