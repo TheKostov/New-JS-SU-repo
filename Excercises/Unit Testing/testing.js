@@ -1,4 +1,4 @@
-function isOddOrEven (string) {
+function isOddOrEven(string) {
     if(typeof(string) !== 'string'){
         return undefined;
     }
@@ -8,8 +8,19 @@ function isOddOrEven (string) {
     return 'odd';
 }
 
-module.exports = isOddOrEven;
+function lookUpChar(string, index) {
+    if (typeof(string) !== 'string' || !Number.isInteger(index)){
+        return undefined;
+    }
+    if (string.length <= index || index < 0) {
+        return 'Incorrect index'
+    }
+    
+    return string.charAt(index);
+}
 
 
-
-// Uncaught Error Error: Cannot find module '/home/thekostov/SoftUniJS/SU-JS-Advanced-Jan2023/New-JS-SU-repo/Lectures/Advanced Functions/node_modules/mocha/bin/_mocha'
+module.exports = {
+    isOddOrEven,
+    lookUpChar
+};
