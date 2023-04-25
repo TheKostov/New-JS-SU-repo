@@ -1,0 +1,30 @@
+class List {
+    constructor() {
+        this.arr = [];
+        this.size = this.arr.length;
+    }
+    add(element) {
+        this.arr.push(element);
+        this.arr.sort((a,b) => a - b)
+        this.size = this.arr.length;
+    }
+    remove(index) {
+        this.arr.splice(index, 1);
+        this.arr.sort((a,b) => a - b)
+        this.size = this.arr.length;
+    }
+    get(index) {
+        return this.arr[index];
+    }
+}
+
+let list = new List();
+list.add(5);
+list.add(6);
+list.add(7);
+list.add(8);
+list.add(12);
+console.log(list.get(1));
+list.remove(1); 
+console.log(list.get(1));
+console.log(list.size)
