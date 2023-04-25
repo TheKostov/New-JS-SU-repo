@@ -9,13 +9,21 @@ class List {
         this.size = this.arr.length;
     }
     remove(index) {
-        this.arr.splice(index, 1);
-        this.arr.sort((a,b) => a - b)
-        this.size = this.arr.length;
+        if(index >= 0 && index < this.arr.length) {
+            this.arr.splice(index, 1);
+            this.arr.sort((a,b) => a - b)
+            this.size = this.arr.length;
+        } else {
+            throw new Error('Invalid index!');
+        }
     }
     get(index) {
-        return this.arr[index];
-    }
+        if(index >= 0 && index < this.arr.length) {
+            return this.arr[index];
+        } else {
+            throw new Error('Invalid index!');
+        }
+    } 
 }
 
 let list = new List();
